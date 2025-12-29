@@ -1,9 +1,8 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class FleetApp {
-    private List<Vehicle> vehicles;
+    private ArrayList<Vehicle> vehicles;
     private Scanner scanner;
     public FleetApp(){
         vehicles = new ArrayList<>();
@@ -12,10 +11,10 @@ public class FleetApp {
     public void run(){
         while(true){
             printMenu();
-            int choice = scanner.nextInt();
+            int num = scanner.nextInt();
             scanner.nextLine();
 
-            switch (choice){
+            switch (num){
                 case 1:
                     printAll();
                     break;
@@ -37,7 +36,7 @@ public class FleetApp {
                 case 7:
                     return;
                 default:
-                    System.out.println("Invalid choice");
+                    System.out.println("Invalid number choice");
             }
         }
     }
@@ -45,7 +44,7 @@ public class FleetApp {
         System.out.println("Print all vehicles");
         System.out.println("Add new car");
         System.out.println("Add new bus");
-        System.out.println("Show total yearly insurance fees");
+        System.out.println("Show total insurance fees");
         System.out.println("Show vehicles older than N years");
         System.out.println("Perform service for all vehicles");
         System.out.println("Quit");
@@ -54,7 +53,7 @@ public class FleetApp {
 
     public void printAll(){
         if(vehicles.isEmpty()){
-            System.out.println("No vehicles found in list");
+            System.out.println("No vehicles found");
             return;
         }
         for(int i = 0; i < vehicles.size(); i++){

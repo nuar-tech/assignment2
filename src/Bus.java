@@ -11,8 +11,8 @@ public class Bus extends Vehicle {
     }
 
     public void setPassengerCapacity(int passengerCapacity) {
-        if (passengerCapacity <= 0) {
-            System.out.println("Passenger capacity can not be equal or less than 0");
+        if (passengerCapacity <= 6) {
+            System.out.println("Passenger capacity can not be equal or less than 6");
         } else {
             this.passengerCapacity = passengerCapacity;
         }
