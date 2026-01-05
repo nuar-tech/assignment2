@@ -12,7 +12,7 @@ public class Car extends Vehicle {
 
     public void setNumberOfDoors(int numberOfDoors) {
         if (numberOfDoors <= 0) {
-            System.out.println("Number of doors can not be equal or less than 0");
+            throw new IllegalArgumentException("Number of doors can not be equal or less than 0");
         }
         this.numberOfDoors = numberOfDoors;
     }

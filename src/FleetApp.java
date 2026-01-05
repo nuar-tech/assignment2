@@ -14,7 +14,7 @@ public class FleetApp {
             int num = scanner.nextInt();
             scanner.nextLine();
 
-            switch (num){
+            switch(num){
                 case 1:
                     printAll();
                     break;
@@ -101,7 +101,7 @@ public class FleetApp {
     }
 
     public void showTotal(){
-        double total = 0;
+        double total = 0.0;
         for(int i = 0; i < vehicles.size(); i++){
             Vehicle v = vehicles.get(i);
             total += v.calculateInsuranceFee();
@@ -124,7 +124,7 @@ public class FleetApp {
                 exist = true;
             }
         }
-        if(!exist){
+        if(exist == false){
             System.out.println("No cars found older");
         }
     }

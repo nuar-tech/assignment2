@@ -27,21 +27,21 @@ public abstract class Vehicle implements Servicable {
 
     public void setModel(String model) {
         if(model == null) {
-            System.out.println("Model can not be empty");
+            throw new IllegalArgumentException("Model can not be empty");
         }
         this.model = model;
     }
 
     public void setYear(int year) {
         if(year > 2025 || year < 1950) {
-            System.out.println("Year must be in range 1950 - 2025");
+            throw new IllegalArgumentException("Year must be in range 1950 - 2025");
         }
         this.year = year;
     }
 
     public void setBasePrice(double basePrice) {
         if(basePrice <= 0) {
-            System.out.println("Base price can not be equal or less than 0");
+            throw new IllegalArgumentException("Base price can not be equal or less than 0");
         }
         this.basePrice = basePrice;
     }
