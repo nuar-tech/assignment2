@@ -41,13 +41,13 @@ public class FleetApp {
         }
     }
     public void printMenu(){
-        System.out.println("Print all vehicles");
-        System.out.println("Add new car");
-        System.out.println("Add new bus");
-        System.out.println("Show total insurance fees");
-        System.out.println("Show vehicles older than N years");
-        System.out.println("Perform service for all vehicles");
-        System.out.println("Quit");
+        System.out.println("1.Print all vehicles");
+        System.out.println("2.Add new car");
+        System.out.println("3.Add new bus");
+        System.out.println("4.Show total insurance fees");
+        System.out.println("5.Show vehicles older than N years");
+        System.out.println("6.Perform service for all vehicles");
+        System.out.println("7.Quit");
         System.out.println("Enter number");
     }
 
